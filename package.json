@@ -1,0 +1,23 @@
+{
+  "name": "finalzooproject",
+  "version": "1.0.0",
+  "description": "Katie Blunck, Peter Otim, Farai\r ## Description",
+  "main": "api.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/katelyndb/FinalZooProject.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/katelyndb/FinalZooProject/issues"
+  },
+  "homepage": "https://github.com/katelyndb/FinalZooProject#readme",
+  "dependencies": {
+    "request": "^2.88.2"
+  }
+}
