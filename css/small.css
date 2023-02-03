@@ -54,6 +54,13 @@ header #navigation {
     padding-right: 5rem;
 }
 
+#menu-icon{
+    font-size: 25px;
+    z-index: 10001;
+    cursor: pointer; 
+    display: none;
+    background: transparent;
+}
 
 #logo img{
     max-width: 100%;
@@ -187,6 +194,7 @@ section{
 #col{
     position: relative;
  }
+ 
 
  footer{
     text-align: center;
