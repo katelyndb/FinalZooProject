@@ -102,7 +102,6 @@ header #navigation {
     display: block;
 }
 
-
 #social-navigation a:hover{
     transform: scale(1.1);
     background: var(--second-color);
