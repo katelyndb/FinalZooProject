@@ -83,13 +83,6 @@ header #navigation {
     padding: 10px 27px;
 }
 
-#social-navigation a{
-    font-size: var(--p-font);
-    color: var(--text-color);
-    font-weight: 500;
-    padding: 10px 27px;
-}
-
 #page-navigation a::after{
     content: '';
     position: absolute;
@@ -106,25 +99,9 @@ header #navigation {
 }
 
 #social-navigation{
-    display: flex;
+    display: block;
 }
 
-#social-navigation li{
-    position: relative;
-}
-
-#social-navigation a{
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 17px;
-    color: var(--bg-color);
-    margin-right: 22px;
-    margin-bottom: 30px;
-}
 
 #social-navigation a:hover{
     transform: scale(1.1);
