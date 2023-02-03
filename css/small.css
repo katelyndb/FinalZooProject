@@ -1,0 +1,193 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+    list-style: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+:root{
+    --bg-color: #5DA592;
+    --text-color: #ebe6df;
+    --second-color: #A45A50;
+    --main-color: #90B795;
+    --big-font: 5rem;
+    --h2-font: 3rem;
+    --p-font: 1.1rem;
+}
+/* HEADER*/
+body{
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    padding: 30px 18%;
+    transition: .3S;
+}
+
+header.sticky{
+    background-color:var(--second-color);
+    padding: 13px 18%;
+    box-shadow: 10px 0px 10px rgb(0, 0, 0 / 105);
+}
+
+header #navigation {
+    font-family: var(--hammersmith-one-font);
+    font-size: 1.125rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 5rem;
+}
+
+
+#logo img{
+    max-width: 100%;
+    width: 120px;
+    height: auto;
+}
+
+#page-navigation{
+    display: flex;
+}
+
+#page-navigation li{
+    position: relative;
+}
+
+#page-navigation a{
+    font-size: var(--p-font);
+    color: var(--text-color);
+    font-weight: 500;
+    padding: 10px 27px;
+}
+
+#social-navigation a{
+    font-size: var(--p-font);
+    color: var(--text-color);
+    font-weight: 500;
+    padding: 10px 27px;
+}
+
+#page-navigation a::after{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: var(--second-color);
+    bottom: -3px;
+    left: 0;
+    transition: .40s;
+}
+
+#page-navigation a:hover::after{
+    width: 100%;
+}
+
+#social-navigation{
+    display: flex;
+}
+
+#social-navigation li{
+    position: relative;
+}
+
+#social-navigation a{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+    color: var(--bg-color);
+    margin-right: 22px;
+    margin-bottom: 30px;
+}
+
+#social-navigation a:hover{
+    transform: scale(1.1);
+    background: var(--second-color);
+    transition: .5s;
+}
+/* header-end*/
+
+/*  home*/
+
+section{
+    padding: 100px 18%;
+}
+
+#home{
+    min-height: 100vh;
+    height: 100%;
+    width: 100%;
+    background: url(../images/pexels-ryutaro-tsukata-6249424.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    grid-gap: 4rem;
+}
+
+#items{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+    grid-gap: 5rem;
+    align-items: center;
+    text-align: center;
+}
+
+#schedule #items #schedule-content{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+#schedule #items #schedule-content{
+    text-align: start;
+    word-spacing: normal;
+    border: 2px solid var(--second-color);
+    border-radius: 30px;
+}
+
+#schedule #items #portfolio #layer{
+    display: grid;
+    grid-template-rows: repeat(auto-fit,minmax(350px, auto));
+    grid-gap: 1rem;
+    align-items: center;
+    margin-top: 2rem;
+    text-align: center;
+    cursor: pointer;
+    border: 2px solid var(--second-color);
+    border-radius: 30px;
+}
+
+#mapping{
+    color: #A45A50;
+    background-color: white;
+    text-align: center;
+}
+
+#col{
+    position: relative;
+ }
+
+ footer{
+    text-align: center;
+ }
