@@ -1,3 +1,4 @@
+import { getAnimalInfo } from "./api.mjs";
 const header = document.querySelector("header");
 
 window.addEventListener("scroll", function () {
@@ -28,3 +29,10 @@ sr.reveal('.home-img', { delay: 350, origin: 'right' })
 
 
 sr.reveal('#home, #schedule, #portfolio, #mapping',{delay:200, origin: 'bottom'})
+
+
+// Gets the animal Info
+var animalData = getAnimalInfo('frog');
+// Displays the animal Info
+console.log(animalData);
+document.querySelector(".animalData").innerHTML = animalData;
