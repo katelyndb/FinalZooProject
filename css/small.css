@@ -143,10 +143,10 @@ section{
 }
 
 #schedule #items #schedule-content{
-    text-align: start;
+    text-align: center;
     word-spacing: normal;
     border: 2px solid var(--second-color);
-    border-radius: 30px;
+    border-radius: 10px;
 }
 
 #schedule #items #portfolio #layer{
