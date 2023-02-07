@@ -172,6 +172,10 @@ section{
     text-align: center;
 }
 
+iframe{
+    width: auto;
+}
+
 #col{
     position: relative;
  }
