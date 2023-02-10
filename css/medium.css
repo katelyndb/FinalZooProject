@@ -99,4 +99,27 @@
         padding: 65px 3%;
         transition: .3s;
     }
+
+    
+    /* contact page*/
+    main section, main section div {
+        background-color: #e5e5e5;
+        margin: 10px;
+        text-align: center;
+        /* border: 2px solid #14213d; */
+        height: 280px;
+    }
+
+    main section {
+        /* height: 400px; */
+        object-fit: cover;
+        overflow: hidden;
+    }
+    #contact {
+        grid-column: 3;
+        grid-row: 1;
+        /* line-height: .5em; */
+    }
+
+
 }

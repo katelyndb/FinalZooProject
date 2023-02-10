@@ -25,4 +25,13 @@
         --p-font: 1rem;
         transition: .3s;
     }
+
+    /* contact page*/
+    #contact {
+        grid-column: 3;
+        grid-row: 1;
+        padding: 20px;
+        /* line-height: .5em; */
+    }
+
 }
