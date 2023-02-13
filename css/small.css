@@ -23,6 +23,24 @@ body{
     color: var(--text-color);
 }
 
+h1{
+    font-size: 60px;
+    background: linear-gradient(
+        270deg,  #5DA592, #A45A50
+        );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+h3{
+    font-size: 40px;
+    background: linear-gradient(
+        270deg,#70423c, #048160
+        );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 header{
     position: fixed;
     width: 100%;
@@ -62,9 +80,9 @@ header #navigation {
     background: transparent;
 }
 
-#logo img{
+#logo {
     max-width: 100%;
-    width: 120px;
+    width: 80px;
     height: auto;
 }
 
@@ -99,8 +117,21 @@ header #navigation {
 }
 
 #social-navigation{
-    display: block;
+    display: flex;
 }
+
+#social-navigation a{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+    color: var(--bg-color);
+    margin-right: 22px;
+    margin-bottom: 30px;
+    }
 
 #social-navigation a:hover{
     transform: scale(1.1);
@@ -197,6 +228,7 @@ iframe{
 .form h1 {
     display: block;
     text-align: center;
+    margin-top: 150px;
 }
 
 
@@ -267,7 +299,74 @@ label, textarea, select{
     color: black;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 18px;
-  }
+}
+
+/*tickets page*/
+.service .heading{
+    margin-top: 50px;
+    text-align: center;
+}
+.service-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(400px, auto));
+    grid-gap: 2rem;
+    align-items: center;
+    margin-top: 5rem; 
+ }
+
+ .row{
+    background: var(--second-color);
+    box-shadow: 18px 0px 87px 0px rgb(10, 15, 70 / 7%);
+    border-radius: 12px 0px 10px;
+    padding: 30px 30px 30px;
+    transition: ease .45s;
+    cursor: pointer;
+ }
+
+ .s img{
+    height: 65px;
+    width: 65px;
+    background: var(--bg-color);
+    padding: 15px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+ }
+
+ .s.s-one img{
+    background: var(--bg-color);
+ }
+ .s.s-two img{
+    background: var(--bg-color);
+ }
+ .s.s-three img{
+    background: var(--bg-color);
+ }
+ .s.s-four img{
+    background: var(--bg-color);
+ }
+
+ .row h3{
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 2px;
+ }
+
+ .row h5{
+    font-size: 17px;
+    font-weight: 500;
+    margin-bottom: 19px;
+ }
+
+ .row p{
+    font-size: var(--p-font);
+    color: var(--text-color);
+    line-height: 28px;
+ }
+
+ .row:hover{
+    will-change: transform;
+    transform: perspective(1000px) rotateX(4.80deg) rotateY(10.50deg) scale3d(1.05,1.10,1.05);
+ }
 
 /* footer*/
  footer{
