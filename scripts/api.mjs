@@ -13,4 +13,3 @@ export function getAnimalInfo(animalName){
   });
   return request[0];
 }
-
