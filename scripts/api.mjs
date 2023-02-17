@@ -1,6 +1,7 @@
+import request from 'request';
+export default function getAnimalInfo(animalName){
 
-export function getAnimalInfo(animalName){
-  const request = require('request');
+
   request.get({
     url: 'https://api.api-ninjas.com/v1/animals?name=' + animalName,
     headers: {
