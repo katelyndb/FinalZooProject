@@ -1,29 +1,59 @@
 
+import http from 'http';
+//import api from'scripts/api.mjs';
+import * as fs from 'fs';
+
+/*
 var http = require('http'); // 1 - Import Node.js core module
+var api = require('scripts/api.mjs');
 const fs = require('fs').promises;
+*/
 const host = 'localhost';
 const port = 8000;
 
 
 const requestListener = function (req, res) {
-
-    
     switch (req.url) {
-        case "/css/small.css" :
+         case "/css/small.css" :
             fs.readFile(__dirname + "/css/small.css")
             .then(contents => {
                 res.writeHead(200, {"Content-Type": "text/css"});
                 res.end(contents);
             })
+            .catch(err => {
+                res.writeHead(500);
+                res.end(err);
+                return;
+            });
             
             break;
+         case "/ticket.html" :
+            fs.readFile(__dirname + "/ticket.html")
+            .then(contents => {
+                res.writeHead(200, {"Content-Type": "text/html"});
+                res.end(contents);
+            })
+            .catch(err => {
+                res.writeHead(500);
+                res.end(err);
+                return;
+            });
+                
+                break;
         default :    
+            
             fs.readFile(__dirname + "/index.html")
             .then(contents => {
                 res.setHeader("Content-Type", "text/html");
                 res.writeHead(200);
+                //res.write("ANIMAL INFORMATION: " + api.getAnimalInfo('turtle'));
                 res.end(contents);
             })
+            .catch(err => {
+                res.writeHead(500);
+                res.end(err);
+                return;
+            });
     };
     //res.end();
     /*
