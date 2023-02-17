@@ -1,5 +1,5 @@
 import request from 'request';
-export function getAnimalInfo(animalName){
+export default function getAnimalInfo(animalName){
 
 
   request.get({

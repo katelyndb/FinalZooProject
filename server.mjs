@@ -1,16 +1,23 @@
 
+
 import http from 'http';
-//import api from'scripts/api.mjs';
+//import api from './scripts/api.mjs';
 import * as fs from 'fs';
 
 /*
 var http = require('http'); // 1 - Import Node.js core module
-var api = require('scripts/api.mjs');
+const api = require('./scripts/api.mjs');
 const fs = require('fs').promises;
 */
 const host = 'localhost';
 const port = 8000;
 
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+
+const __dirname = path.dirname(__filename);
 
 const requestListener = function (req, res) {
     switch (req.url) {
@@ -55,39 +62,6 @@ const requestListener = function (req, res) {
                 return;
             });
     };
-    //res.end();
-    /*
-    fs.readFile(__dirname + "/index.html")
-        .then(contents => {
-            res.setHeader("Content-Type", "text/html");
-            res.writeHead(200);
-            res.end(contents);
-            
-            /*
-            res.setHeader("Content-Type", "application/json");
-            
-            switch (req.url) {
-                case "/animals":
-                   res.writeHead(200);
-                   res.end(books);
-                   break
-                case "/authors":
-                   res.writeHead(200);
-                   res.end(authors);
-                   break
-                default:
-                  res.writeHead(404);
-                  res.end(JSON.stringify({error:"Resource not found"}));
-    }*/
-            
-            /*
-        })
-        .catch(err => {
-            res.writeHead(500);
-            res.end(err);
-            return;
-        });
-        */
         
 };
 
