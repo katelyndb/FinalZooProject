@@ -1,5 +1,12 @@
 import { getAnimalInfo } from "./api.mjs";
-
+/*
+async function getApi(animal){
+    //const api = await import('./scripts/api.mjs');
+    console.log("ANIMAL INFORMATION: " + getAnimalInfo(animal) );
+    return;
+}
+*/
+console.log(getAnimalInfo("monkey"));
 
 const header = document.querySelector("header");
 

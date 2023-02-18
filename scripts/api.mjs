@@ -1,5 +1,5 @@
 import request from 'request';
-export default function getAnimalInfo(animalName){
+export function getAnimalInfo(animalName){
 
 
   request.get({
@@ -14,3 +14,4 @@ export default function getAnimalInfo(animalName){
   });
   return request[0];
 }
+
