@@ -9,7 +9,7 @@ var http = require('http'); // 1 - Import Node.js core module
 //import { getAnimalInfo } from './scripts/api.mjs';
 
 async function getApi(animal){
-    const api = await import('./scripts/api.mjs');
+    const api = await import('./api.mjs');
     console.log("ANIMAL INFORMATION: " + api.getAnimalInfo(animal) );
     return;
 }
@@ -37,7 +37,6 @@ const requestListener = function (req, res) {
                 return;
             });
 
-            /*
         case "/scripts/index.mjs" :
             fs.readFile(__dirname + "/scripts/index.mjs")
             .then(contents => {
@@ -49,7 +48,6 @@ const requestListener = function (req, res) {
                 res.end(err);
                 return;
             });
-            */
 
         case "/css/medium.css" :
             fs.readFile(__dirname + "/css/medium.css")
@@ -100,8 +98,56 @@ const requestListener = function (req, res) {
                 res.end(err);
                 return;
             });
+        case "/about.html" :
+            fs.readFile(__dirname + "/about.html")
+            .then(contents => {
+                res.writeHead(200, {"Content-Type": "text/html"});
+                res.end(contents);
+            })
+            .catch(err => {
+                res.writeHead(500);
+                res.end(err);
+                return;
+            });
+            
+         case "/workers.html" :
+            fs.readFile(__dirname + "/workers.html")
+            .then(contents => {
+                res.writeHead(200, {"Content-Type": "text/html"});
+                res.end(contents);
+            })
+            .catch(err => {
+                res.writeHead(500);
+                res.end(err);
+                return;
+            });
+            
+         case "/images/pexels-ryutaro-tsukata-6249424.jpg" :
+            fs.readFile(__dirname + "/images/pexels-ryutaro-tsukata-6249424.jpg")
+            .then(contents => {
+                res.writeHead(200, {"Content-Type": "image/jpeg"});
+                res.end(contents);
+            })
+            .catch(err => {
+                res.writeHead(500);
+                res.end(err);
+                return;
+            });
+        case "/contact.html" :
+            fs.readFile(__dirname + "/contact.html")
+            .then(contents => {
+                res.writeHead(200, {"Content-Type": "text/html"});
+                res.end(contents);
+            })
+            .catch(err => {
+                res.writeHead(500);
+                res.end(err);
+                return;
+            });
                 
                 break;
+
+        
         default :    
             
             fs.readFile(__dirname + "/index.html")
