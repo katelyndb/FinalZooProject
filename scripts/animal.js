@@ -52,13 +52,90 @@ $.ajax({
     }
 });
 };
+const zooAnimals = [
+  'lion',
+  'tiger',
+  'elephant',
+  'giraffe',
+  'hippopotamus',
+  'zebra',
+  'cheetah',
+  'rhinoceros',
+  'monkey',
+  'gorilla',
+  'crocodile',
+  'snake',
+  'ostrich',
+  'kangaroo',
+  'koala',
+  'panda',
+  'penguin',
+  'flamingo',
+  'parrot',
+  'peacock',
+  'camel',
+  'wolf',
+  'fox',
+  'hyena',
+  'bear',
+  'deer',
+  'reindeer',
+  'moose',
+  'water buffalo',
+  'bison',
+  'elk',
+  'llama',
+  'alpaca',
+  'goat',
+  'sheep',
+  'pig',
+  'cow',
+  'horse',
+  'donkey',
+  'chicken',
+  'duck',
+  'swan',
+  'goose',
+  'turkey',
+  'emu',
+];
+const randomNum = Math.floor(Math.random() * 43);
+const randomChoice = zooAnimals[randomNum];
+getAnimalInfo(randomChoice);
 
-
+/*
+var form = document.querySelector("animalForm");
+console.log(form);
+let bacon = form.elements["animalName"].value;
+console.log(bacon);
+*/
+/*
 // Get the form element
 const form = document.getElementById('animalForm');
-
+/*
 // Add 'submit' event handler
 form.addEventListener('submit', (event) => {
   getAnimalInfo(form[0]);
 });
+*/
+/*
+document.querySelector("#submit").addEventListener("click", (e) => {
+  e.preventDefault();
 
+  myCheckout.checkout();
+});\*/
+/*
+const myForm = document.getElementById('animalForm');
+const myInput = document.getElementById('animalName');
+
+// Add an event listener to the form to handle submissions
+myForm.addEventListener('submit', function(event) {
+  event.preventDefault(); // Prevent the default form submission behavior
+
+  // Get the value of the input field
+  const name = myInput.value;
+
+  // Display the results on the webpage
+  console.log(name);
+});
+*/
