@@ -199,8 +199,12 @@ section{
     cursor: pointer;
     border: 2px solid var(--second-color);
     border-radius: 30px;
+    
 }
 
+.animalLayer {
+    background-color: #A45A50 ;
+}
 #mapping{
     color: #A45A50;
     background-color: white;
@@ -213,6 +217,7 @@ iframe{
 
 #col{
     position: relative;
+    
  }
   /* contact page*/
 
